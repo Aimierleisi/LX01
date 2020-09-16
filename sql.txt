@@ -1,0 +1,20 @@
+22. 在查询编辑器中执行以下脚本在Mysql8创建数据库Works。
+DROP DATABASE IF EXISTS Works;
+CREATE DATABASE Works DEFAULT CHARSET=GBK;
+23. 在上面脚本后面，输入以下代码在Works数据库中创建UserInfo表。
+USE Works;
+CREATE TABLE UserInfo
+(
+UserName nvarchar(50) Primary key,
+Password nvarchar(50) not null,
+QQ nvarchar(12),
+Email nvarchar(50),
+Type nchar(10) not null,
+UserImg nvarchar(250)
+) ;
+24. 打开课本P39页，按照课本给出的表结构，分别使用脚本（类似第3小题的代码）在Works表中创建Acitvity、WorkInfo、Comment、Image表。
+提示：
+Acitvity表：标识列和默认值设置方法如下，其他列自己完成(注意mysql长度不能为MAX,凡课本表中宽度为MAX的一律用8000代替)
+ActivityID int Primary key auto_increment,
+ActivityVerify nchar(10) not null DEFAULT '待审核',
+
